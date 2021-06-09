@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Style.css">
+        <script src="Script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/7c0c0e98c2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="leftBtn" onclick="showLeftbar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="leftBar">
+            <div onclick="hideLeftbar()"><i class="fas fa-long-arrow-alt-left"></i></div>
+            <div onclick="showControls()">Controls</div>
+            <div>Soon...</div>
+        </div>
+        <div class="controlsPage">
+            <div class="controlsDesc">
+                Appuyer sur une touche pour avoir la ligne de code correspondante.
+            </div>
+            <div class="controlsResult">
+                
+            </div>
+            <script>
+                $(document).keydown(function(e) {
+                    updateOutput(e.which, e.key);
+                });
+            </script>
+        </div>
+    </body>
+</html>
